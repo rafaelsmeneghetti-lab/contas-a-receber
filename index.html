@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas a Receber - Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 640px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 1.5rem;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+        }
+        .card-jpd:hover {
+            border-color: #818cf8;
+        }
+        .card-augustus:hover {
+            border-color: #34d399;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+        .card-jpd::before {
+            background: linear-gradient(90deg, #818cf8, #6366f1);
+        }
+        .card-augustus::before {
+            background: linear-gradient(90deg, #34d399, #10b981);
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .card-jpd h2 {
+            color: #818cf8;
+        }
+        .card-augustus h2 {
+            color: #34d399;
+        }
+        .card p {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        .card .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .card-jpd .btn {
+            background: linear-gradient(135deg, #818cf8, #6366f1);
+            color: white;
+        }
+        .card-augustus .btn {
+            background: linear-gradient(135deg, #34d399, #10b981);
+            color: white;
+        }
+        .card .btn:hover {
+            opacity: 0.9;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contas a Receber</h1>
+        <p class="subtitle">Selecione o relatório desejado</p>
+        <div class="cards">
+            <a href="https://rafaelsmeneghetti-lab.github.io/jpd-contas-receber/" class="card card-jpd" target="_blank">
+                <div class="card-icon">🚛</div>
+                <h2>JPD</h2>
+                <p>Relatório de contas a receber da transportadora JPD</p>
+                <span class="btn">Acessar JPD</span>
+            </a>
+            <a href="https://rafaelsmeneghetti-lab.github.io/augustus-contas-receber/" class="card card-augustus" target="_blank">
+                <div class="card-icon">⛽</div>
+                <h2>Augustus</h2>
+                <p>Relatório de contas a receber da Augustus Transportes</p>
+                <span class="btn">Acessar Augustus</span>
+            </a>
+        </div>
+        <div class="footer">
+            Desenvolvido por Rafael Meneghetti &mdash; rafaelsmeneghetti@gmail.com
+        </div>
+    </div>
+</body>
+</html>
